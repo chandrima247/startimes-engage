@@ -307,7 +307,7 @@
       white-space: nowrap; display: flex; align-items: center; gap: 3px;
     }
     .prem-freq { font-size: 11px; font-weight: 500; color: #b0b7c3; flex-shrink: 0; }
-    /* each stat block — used in service center mode only */
+    /* each stat block — used in dealer mode only */
     .ih-stat {
       display: flex; flex-direction: column; justify-content: center; gap: 4px;
       padding: 0 20px; flex-shrink: 0;
@@ -332,8 +332,8 @@
     .info-row svg { flex-shrink: 0; color: #9ca3af; }
     .subscription-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #374151; margin-bottom: 4px; }
 
-    /* ── UNLINKED / SERVICE_CENTER INFO HEADER MODES ── */
-    .ih-unlinked-mode, .ih-service center-mode {
+    /* ── UNLINKED / DEALER INFO HEADER MODES ── */
+    .ih-unlinked-mode, .ih-dealer-mode {
       display: none; flex: 1; align-items: center; gap: 0; min-width: 0;
     }
     .ih-unlinked-search {
@@ -352,19 +352,19 @@
       transition: background 0.15s; white-space: nowrap; flex-shrink: 0;
     }
     .btn-link-subscription:hover { background: #0070C4; }
-    /* service center mode */
-    .ih-service center-badge {
+    /* dealer mode */
+    .ih-dealer-badge {
       display: flex; align-items: center; gap: 8px;
       padding: 10px 14px; border-right: 1px solid #dbeafe; background: #eff6ff; flex-shrink: 0;
     }
-    .ih-service center-badge svg { color: #3b82f6; flex-shrink: 0; }
-    .ih-service center-name { font-size: 12px; font-weight: 700; color: #1e40af; }
-    .ih-service center-type { font-size: 10.5px; color: #3b82f6; }
-    /* unlinked / service center conv card accents */
+    .ih-dealer-badge svg { color: #3b82f6; flex-shrink: 0; }
+    .ih-dealer-name { font-size: 12px; font-weight: 700; color: #1e40af; }
+    .ih-dealer-type { font-size: 10.5px; color: #3b82f6; }
+    /* unlinked / dealer conv card accents */
     .conv-item.unlinked-conv { border-right: 3px solid rgba(217,119,6,0.55); }
-    .conv-item.service center-conv  { border-right: 3px solid rgba(59,130,246,0.55); }
+    .conv-item.dealer-conv  { border-right: 3px solid rgba(59,130,246,0.55); }
     .conv-unlinked-tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 5px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .conv-service center-tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 5px; background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+    .conv-dealer-tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 5px; background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
     /* hide past sessions for no-history convs */
     #threadsArea[data-no-history] .hist-section-hdr { display: none; }
     #threadsArea[data-no-history] .thread-item:not(.thread-active) { display: none; }
@@ -1535,16 +1535,16 @@
     .c360-nxtpe-sub  { font-size:11px; color:#6366f1; margin-top:1px; }
     .c360-nxtpe-launch { margin-left:auto; padding:6px 14px; background:#6366f1; color:#fff; border:none; border-radius:8px; font-size:12px; font-weight:600; cursor:pointer; }
     .c360-nxtpe-launch:hover { background:#4f46e5; }
-    .c360-payment method-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #f3f4f6; }
-    .c360-payment method-row:last-child { border-bottom:none; }
-    .c360-payment method-icon { width:28px; height:28px; border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
-    .c360-payment method-info { flex:1; min-width:0; }
-    .c360-payment method-name { font-size:12px; font-weight:600; color:#374151; }
-    .c360-payment method-meta { font-size:10.5px; color:#9ca3af; margin-top:1px; }
-    .c360-payment method-badge { font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:20px; }
-    .c360-payment method-badge.active  { background:#dcfce7; color:#15803d; }
-    .c360-payment method-badge.paused  { background:#fef9c3; color:#854d0e; }
-    .c360-payment method-badge.failed  { background:#dbeafe; color:#dc2626; }
+    .c360-payment-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #f3f4f6; }
+    .c360-payment-row:last-child { border-bottom:none; }
+    .c360-payment-icon { width:28px; height:28px; border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; }
+    .c360-payment-info { flex:1; min-width:0; }
+    .c360-payment-name { font-size:12px; font-weight:600; color:#374151; }
+    .c360-payment-meta { font-size:10.5px; color:#9ca3af; margin-top:1px; }
+    .c360-payment-badge { font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:20px; }
+    .c360-payment-badge.active  { background:#dcfce7; color:#15803d; }
+    .c360-payment-badge.paused  { background:#fef9c3; color:#854d0e; }
+    .c360-payment-badge.failed  { background:#dbeafe; color:#dc2626; }
 
     /* KNOWLEDGE BASE PANEL */
     .kb-panel { position:fixed; top:68px; right:0; bottom:0; width:360px; background:#fff; border-left:1px solid #e5e7eb; z-index:501; display:flex; flex-direction:column; transform:translateX(100%); transition:transform 0.28s cubic-bezier(0.4,0,0.2,1); box-shadow:-6px 0 24px rgba(0,0,0,0.08); }
@@ -2045,7 +2045,7 @@
         </div>
 
         <!-- Item 2: Streaming Service / Closed / Low -->
-        <div class="conv-item" data-conv-id="conv-2" data-priority="low" data-type="closed" data-phone="257987654321" data-account="health subscription" data-agent="unassigned" data-status="closed" data-qrcp="Q" data-ctype="Technical Support" data-subtype="General Inquiry" onclick="selectConv(this)">
+        <div class="conv-item" data-conv-id="conv-2" data-priority="low" data-type="closed" data-phone="257987654321" data-account="Streaming Service" data-agent="unassigned" data-status="closed" data-qrcp="Q" data-ctype="Technical Support" data-subtype="General Inquiry" onclick="selectConv(this)">
           <div class="conv-top">
             <span class="conv-phone">257 987654321</span>
             <span class="conv-divider">|</span>
@@ -2145,7 +2145,7 @@
         </div>
 
         <!-- Item 6: Streaming Service / Support / In Progress / High -->
-        <div class="conv-item" data-conv-id="conv-6" data-priority="high" data-type="open" data-phone="260789321654" data-account="health subscription" data-agent="priya m." data-status="in progress" data-qrcp="R" data-ctype="Support" data-subtype="Request Processing" onclick="selectConv(this)">
+        <div class="conv-item" data-conv-id="conv-6" data-priority="high" data-type="open" data-phone="260789321654" data-account="Streaming Service" data-agent="priya m." data-status="in progress" data-qrcp="R" data-ctype="Support" data-subtype="Request Processing" onclick="selectConv(this)">
           <div class="conv-top">
             <span class="conv-phone">260 789321654</span>
             <span class="conv-divider">|</span>
@@ -2169,7 +2169,7 @@
         </div>
 
         <!-- Item 7: Unlinked number — unknown caller -->
-        <div class="conv-item unread unlinked-conv" data-conv-id="conv-7" data-conv-mode="unlinked" data-priority="medium" data-type="open" data-phone="256700000999" data-account="health subscription" data-agent="unassigned" data-status="pending" data-qrcp="R" data-ctype="Subscription Query" data-subtype="No Account Found" onclick="selectConv(this)">
+        <div class="conv-item unread unlinked-conv" data-conv-id="conv-7" data-conv-mode="unlinked" data-priority="medium" data-type="open" data-phone="256700000999" data-account="Streaming Service" data-agent="unassigned" data-status="pending" data-qrcp="R" data-ctype="Subscription Query" data-subtype="No Account Found" onclick="selectConv(this)">
           <div class="conv-top">
             <span class="conv-phone">256 700 000 999</span>
             <span class="conv-divider">|</span>
@@ -2191,8 +2191,8 @@
           </div>
         </div>
 
-        <!-- Item 8: Service Center query — StarTimes Service Center 
-        <div class="conv-item service center-conv" data-conv-id="conv-8" data-conv-mode="service center" data-priority="high" data-type="open" data-phone="256414123456" data-account="health subscription" data-agent="priya m." data-status="in progress" data-qrcp="Q" data-ctype="Service Center Query" data-subtype="Membership Validity" onclick="selectConv(this)">
+        <!-- Item 8: Dealer query — StarTimes Authorized Dealer -->
+        <div class="conv-item dealer-conv" data-conv-id="conv-8" data-conv-mode="dealer" data-priority="high" data-type="open" data-phone="256414123456" data-account="Streaming Service" data-agent="priya m." data-status="in progress" data-qrcp="Q" data-ctype="Service Center Query" data-subtype="Membership Validity" onclick="selectConv(this)">
           <div class="conv-top">
             <span class="conv-phone">StarTimes Service Center</span>
             <span class="conv-divider">|</span>
@@ -2207,7 +2207,7 @@
           </div>
           <div class="conv-preview">Querying membership validity for customer David Ochieng — Ref PT-20394.</div>
           <div class="conv-footer">
-            <span class="conv-service center-tag">R</span>
+            <span class="conv-dealer-tag">R</span>
             <span class="tag tag-gray">Membership</span>
             <span class="badge-in-progress">In Progress</span>
             <span class="conv-time">12m ago</span>
@@ -2302,13 +2302,13 @@
             </div>
           </div>
 
-          <!-- SERVICE_CENTER MODE -->
-          <div class="ih-service center-mode" id="ihService CenterMode">
-            <div class="ih-service center-badge">
+          <!-- DEALER MODE -->
+          <div class="ih-dealer-mode" id="ihDealerMode">
+            <div class="ih-dealer-badge">
               <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9"/></svg>
               <div style="display:flex;flex-direction:column;gap:2px;">
-                <span class="ih-service center-name" id="ihService CenterName">—</span>
-                <span class="ih-service center-type" id="ihService CenterType">Service Center Query</span>
+                <span class="ih-dealer-name" id="ihDealerName">—</span>
+                <span class="ih-dealer-type" id="ihDealerType">Service Center Query</span>
               </div>
             </div>
             <div class="ih-unlinked-fields" style="gap:12px;">
@@ -2333,7 +2333,7 @@
               </div>
             </div>
             <div class="ih-360-btn" style="gap:8px; margin-left:auto;">
-              <button class="btn-c360" onclick="verifyService CenterMember()" style="background:#3b82f6;border-color:#3b82f6;" title="Verify subscriber access">Verify Member</button>
+              <button class="btn-c360" onclick="verifyDealerMember()" style="background:#3b82f6;border-color:#3b82f6;" title="Verify subscriber access">Verify Member</button>
             </div>
           </div>
 
@@ -3619,7 +3619,7 @@ const CONV_DATA = {
       { dir:'in',  type:'image', file:'Screenshot_2026-03-26.jpg', size:'348 KB', time:'01:54 PM' },
       { dir:'in',  type:'doc',   file:'Bank_Statement_March_2026.pdf', size:'2.4 MB', mime:'PDF', time:'01:55 PM' },
       { dir:'in',  type:'voice', duration:'0:17', seed:12345, time:'01:56 PM' },
-      { dir:'out', type:'doc',   file:'Account Verification_Verification_Form.pdf', size:'320 KB', mime:'PDF', time:'01:58 PM' },
+      { dir:'out', type:'doc',   file:'Account_Verification_Form.pdf', size:'320 KB', mime:'PDF', time:'01:58 PM' },
       { dir:'out', type:'voice', duration:'0:22', seed:54321, time:'02:00 PM' },
       { dir:'in',  type:'form-submitted', formName:'Account Verification Form', time:'02:03 PM' },
       { type:'reassign', from:'Amira H.', to:'Mark J.', time:'02:10 PM' },
@@ -3746,7 +3746,7 @@ const QUICK_ACTIONS_MAP = {
     { label: 'Link Account',       action: () => document.getElementById('ihLinkInput')?.focus() },
     { label: 'Escalate',           action: () => openEscalationModal() },
   ],
-  'service center': [
+  'dealer': [
     { label: 'Confirm Access',   action: () => insertTemplate('I can confirm the customer\'s membership is active. Channel access is valid. Please proceed with the service activation reference provided.') },
     { label: 'Request Documents',  action: () => insertTemplate('Kindly send the service report and itemised invoice to support@startimes.com referencing the customer ref and service activation code.') },
     { label: 'Deny / Clarify',     action: () => insertTemplate('We are unable to confirm active access for this customer at this time. Please ask the customer to contact us directly on 0800 123 456 with their account number.') },
@@ -3797,25 +3797,25 @@ function loadConversationData(convId) {
   if (!d) return;
 
   const isUnlinked = d.unlinked === true;
-  const isService Center = d.service center === true;
-  const isNormal   = !isUnlinked && !isService Center;
+  const isDealer = d.dealer === true;
+  const isNormal   = !isUnlinked && !isDealer;
 
   // Toggle past sessions visibility
   const threadsArea = document.getElementById('threadsArea');
-  if (isUnlinked || isService Center) {
+  if (isUnlinked || isDealer) {
     threadsArea.dataset.noHistory = '1';
   } else {
     delete threadsArea.dataset.noHistory;
   }
 
   // Toggle info header sections
-  document.querySelector('.ih-customer').style.display  = isService Center ? 'none' : '';
-  document.querySelectorAll('.ih-divider').forEach(el => el.style.display = isService Center ? 'none' : '');
+  document.querySelector('.ih-customer').style.display  = isDealer ? 'none' : '';
+  document.querySelectorAll('.ih-divider').forEach(el => el.style.display = isDealer ? 'none' : '');
   document.querySelector('.ih-subscription').style.display          = isNormal ? '' : 'none';
   document.getElementById('ihChurnSection').style.display     = isNormal ? '' : 'none';
-  document.getElementById('ih360BtnGroup').style.display      = isService Center ? 'none' : '';
+  document.getElementById('ih360BtnGroup').style.display      = isDealer ? 'none' : '';
   document.getElementById('ihUnlinkedMode').style.display     = isUnlinked ? 'flex' : 'none';
-  document.getElementById('ihService CenterMode').style.display     = isService Center ? 'flex' : 'none';
+  document.getElementById('ihDealerMode').style.display     = isDealer ? 'flex' : 'none';
 
   // Summary banner: hide for unlinked (no account to summarise)
   const summaryBanner = document.getElementById('summaryBanner');
@@ -3830,9 +3830,9 @@ function loadConversationData(convId) {
     document.getElementById('ihLinkInput').dataset.convId = convId;
     // Toast warning instead of permanent banner
     showToast('Unable to fetch account details — customer may have a different number on file', 'error');
-  } else if (isService Center) {
-    document.getElementById('ihService CenterName').textContent   = d.service centerName;
-    document.getElementById('ihService CenterType').textContent   = d.service centerType;
+  } else if (isDealer) {
+    document.getElementById('ihDealerName').textContent   = d.dealerName;
+    document.getElementById('ihDealerType').textContent   = d.dealerType;
     document.getElementById('ihHospQueryType').textContent  = d.queryType;
     document.getElementById('ihHospPatientRef').textContent = d.customerRef;
     document.getElementById('ihHospMemberId').textContent   = d.memberId;
@@ -4701,9 +4701,9 @@ function linkSubscriptionToConv() {
   }, 900);
 }
 
-// ── VERIFY SERVICE_CENTER MEMBER ─────────────────────────────────────────────────────
-function verifyService CenterMember() {
-  const btn = document.querySelector('#ihService CenterMode .btn-c360');
+// ── VERIFY DEALER MEMBER ─────────────────────────────────────────────────────
+function verifyDealerMember() {
+  const btn = document.querySelector('#ihDealerMode .btn-c360');
   btn.textContent = 'Verifying…'; btn.disabled = true;
   setTimeout(() => {
     const memberId = document.getElementById('ihHospMemberId').textContent;
@@ -6524,21 +6524,21 @@ function render360Tab(tab) {
 
       <div class="c360-section-hdr">Active Payments</div>
       <div style="margin-bottom:16px;">
-        <div class="c360-payment method-row">
-          <div class="c360-payment method-icon" style="background:#dbeafe;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <div class="c360-payment method-info">
-            <div class="c360-payment method-name">Auto-Renewal — MTN Mobile Money</div>
-            <div class="c360-payment method-meta">Acct: ****4821 · UGX 30,000 / month · Since Jun 2018</div>
+        <div class="c360-payment-row">
+          <div class="c360-payment-icon" style="background:#dbeafe;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+          <div class="c360-payment-info">
+            <div class="c360-payment-name">Auto-Renewal — MTN Mobile Money</div>
+            <div class="c360-payment-meta">Acct: ****4821 · UGX 30,000 / month · Since Jun 2018</div>
           </div>
-          <span class="c360-payment method-badge failed">Failed</span>
+          <span class="c360-payment-badge failed">Failed</span>
         </div>
-        <div class="c360-payment method-row">
-          <div class="c360-payment method-icon" style="background:#f0fdf4;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <div class="c360-payment method-info">
-            <div class="c360-payment method-name">MTN Mobile Money</div>
-            <div class="c360-payment method-meta">+256 77X XXX XXX · UGX 30,000 · Backup payment method</div>
+        <div class="c360-payment-row">
+          <div class="c360-payment-icon" style="background:#f0fdf4;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <div class="c360-payment-info">
+            <div class="c360-payment-name">MTN Mobile Money</div>
+            <div class="c360-payment-meta">+256 77X XXX XXX · UGX 30,000 · Backup payment method</div>
           </div>
-          <span class="c360-payment method-badge active">Active</span>
+          <span class="c360-payment-badge active">Active</span>
         </div>
       </div>
 
@@ -6552,19 +6552,19 @@ function render360Tab(tab) {
 
       <div class="c360-section-hdr">Upcoming Collections</div>
       <div>
-        <div class="c360-payment method-row">
-          <div class="c360-payment method-info">
-            <div class="c360-payment method-name">Payment Due — 14 Nov 2025</div>
-            <div class="c360-payment method-meta">UGX 30,000 · Auto-Renewal (MTN MoMo)</div>
+        <div class="c360-payment-row">
+          <div class="c360-payment-info">
+            <div class="c360-payment-name">Payment Due — 14 Nov 2025</div>
+            <div class="c360-payment-meta">UGX 30,000 · Auto-Renewal (MTN MoMo)</div>
           </div>
-          <span class="c360-payment method-badge paused">Scheduled</span>
+          <span class="c360-payment-badge paused">Scheduled</span>
         </div>
-        <div class="c360-payment method-row">
-          <div class="c360-payment method-info">
-            <div class="c360-payment method-name">Retry — Mar 2026 (Failed SO)</div>
-            <div class="c360-payment method-meta">UGX 30,000 · MTN MoMo fallback</div>
+        <div class="c360-payment-row">
+          <div class="c360-payment-info">
+            <div class="c360-payment-name">Retry — Mar 2026 (Failed SO)</div>
+            <div class="c360-payment-meta">UGX 30,000 · MTN MoMo fallback</div>
           </div>
-          <span class="c360-payment method-badge failed">Retry Pending</span>
+          <span class="c360-payment-badge failed">Retry Pending</span>
         </div>
       </div>`;
   }
@@ -7065,7 +7065,7 @@ const FORMS_DATA = {
   },
   'request':          { type:'form', iconBg:'#dbeafe', name:'Service Form (SR-02)',          ref:'ST-SR-02', desc:'Complete this form to submit your service request. Attach supporting documents.',                url:'https://forms.startimes.com/request'          },
   'renewal':        { type:'form', iconBg:'#fef9c3', name:'Renewal Form',          ref:'ST-RN-01', desc:'Review and confirm your renewal options. Upgrade your bouquet or add Sports channels at renewal.',                 url:'https://forms.startimes.com/renewal'        },
-  'authorized user':    { type:'form', iconBg:'#f3e8ff', name:'Account Update (AU-01)', ref:'ST-AU-01', desc:'Add, change, or remove authorized users on your account. National ID copy required.',               url:'https://forms.startimes.com/authorized user'    },
+  'authorized user':    { type:'form', iconBg:'#f3e8ff', name:'Account Update (AU-01)', ref:'ST-AU-01', desc:'Add, change, or remove authorized users on your account. National ID copy required.',               url:'https://forms.startimes.com/account-update'    },
   'kyc':            { type:'form', iconBg:'#e0f2fe', name:'Account Verification Form',       ref:'ST-AV-01', desc:'Verify your identity as required by compliance. Takes 2 minutes.',                       url:'https://forms.startimes.com/kyc'            },
   // Links
   'pay-link':       { type:'link', iconBg:'#dcfce7', name:'Payment Link',               ref:'', desc:'Secure online payment for your subscription. Accepts MTN MoMo, Airtel Money, card.',                         url:'https://pay.startimes.com/?subscription=880021920' },
