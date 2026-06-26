@@ -1943,9 +1943,9 @@
 
       <div class="tabs" id="convTabs">
         <div class="tab-group">
-          <div class="tab active" data-filter="all">All (80)</div>
-          <div class="tab" data-filter="open">Open (56)</div>
-          <div class="tab" data-filter="closed">Closed (24)</div>
+          <div class="tab active" data-filter="all">All (84)</div>
+          <div class="tab" data-filter="open">Open (58)</div>
+          <div class="tab" data-filter="closed">Closed (26)</div>
         </div>
       </div>
 
@@ -2215,6 +2215,98 @@
             <span class="tag tag-gray">Decoder</span>
             <span class="badge-in-progress">In Progress</span>
             <span class="conv-time">12m ago</span>
+          </div>
+        </div>
+
+        <!-- Item 9: Lead to Subscription — New Customer Acquisition -->
+        <div class="conv-item unread" data-conv-id="conv-9" data-priority="medium" data-type="open" data-phone="254722334455" data-account="DTT (Antenna)" data-agent="sarah k." data-status="in progress" data-qrcp="P" data-ctype="Lead to Subscription" data-subtype="New Customer" onclick="selectConv(this)">
+          <div class="conv-top">
+            <span class="conv-phone">254 722 334 455</span>
+            <span class="conv-divider">|</span>
+            <span class="conv-account">DTT (Antenna)</span>
+            <div class="conv-right">
+              <div class="conv-agent-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                Sarah K.
+              </div>
+              <div class="conv-more" onclick="openConvMenu(event, this)">⋮</div>
+            </div>
+          </div>
+          <div class="conv-preview">New lead from Nairobi South B — Classic antenna combo ordered with delivery.</div>
+          <div class="conv-footer">
+            <span class="qrcp-label qrcp-label-P">P</span>
+            <span class="tag tag-gray">Lead</span>
+            <span class="badge-in-progress">In Progress</span>
+            <span class="conv-time" data-ts-display="item9">25m ago</span>
+          </div>
+        </div>
+
+        <!-- Item 10: Downgrade & Pause — Retention -->
+        <div class="conv-item" data-conv-id="conv-10" data-priority="high" data-type="closed" data-phone="254733556677" data-account="DTT (Antenna)" data-agent="mark j." data-status="closed" data-qrcp="R" data-ctype="Bouquet Renewal" data-subtype="Downgrade" onclick="selectConv(this)">
+          <div class="conv-top">
+            <span class="conv-phone">254 733 556 677</span>
+            <span class="conv-divider">|</span>
+            <span class="conv-account">DTT (Antenna)</span>
+            <div class="conv-right">
+              <div class="conv-agent-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                Mark J.
+              </div>
+              <div class="conv-more" onclick="openConvMenu(event, this)">⋮</div>
+            </div>
+          </div>
+          <div class="conv-preview">Customer downgraded Classic → Basic to avoid cancellation. Retained.</div>
+          <div class="conv-footer">
+            <span class="qrcp-label qrcp-label-R">R</span>
+            <span class="tag tag-gray">Bouquet Renewal</span>
+            <span class="badge-closed">Closed</span>
+            <span class="conv-time" data-ts-display="item10">1h ago</span>
+          </div>
+        </div>
+
+        <!-- Item 11: No-Signal AI Triage -->
+        <div class="conv-item" data-conv-id="conv-11" data-priority="low" data-type="closed" data-phone="254711889900" data-account="DTH (Satellite)" data-agent="unassigned" data-status="closed" data-qrcp="Q" data-ctype="Signal / No Access" data-subtype="AI Self-Resolved" onclick="selectConv(this)">
+          <div class="conv-top">
+            <span class="conv-phone">254 711 889 900</span>
+            <span class="conv-divider">|</span>
+            <span class="conv-account">DTH (Satellite)</span>
+            <div class="conv-right">
+              <div class="conv-agent-label unassigned" id="agent-label-conv-11">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                AI Agent
+              </div>
+              <div class="conv-more" onclick="openConvMenu(event, this)">⋮</div>
+            </div>
+          </div>
+          <div class="conv-preview">No Signal resolved by AI — cable check + Auto Search. No technician needed.</div>
+          <div class="conv-footer">
+            <span class="qrcp-label qrcp-label-Q">Q</span>
+            <span class="tag tag-gray">Signal / No Access</span>
+            <span class="badge-closed">Closed</span>
+            <span class="conv-time" data-ts-display="item11">2h ago</span>
+          </div>
+        </div>
+
+        <!-- Item 12: NPS Survey + Cross-Sell -->
+        <div class="conv-item" data-conv-id="conv-12" data-priority="low" data-type="open" data-phone="254722334455" data-account="DTH (Satellite)" data-agent="priya m." data-status="pending" data-qrcp="P" data-ctype="Account Query" data-subtype="NPS + Cross-Sell" onclick="selectConv(this)">
+          <div class="conv-top">
+            <span class="conv-phone">254 722 334 455</span>
+            <span class="conv-divider">|</span>
+            <span class="conv-account">DTH (Satellite)</span>
+            <div class="conv-right">
+              <div class="conv-agent-label">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                Priya M.
+              </div>
+              <div class="conv-more" onclick="openConvMenu(event, this)">⋮</div>
+            </div>
+          </div>
+          <div class="conv-preview">NPS 9/10 — interested in StarTimes Solar. Advisor follow-up pending.</div>
+          <div class="conv-footer">
+            <span class="qrcp-label qrcp-label-P">P</span>
+            <span class="tag tag-gray">Account Query</span>
+            <span class="badge-pending">Pending</span>
+            <span class="conv-time" data-ts-display="item12">3h ago</span>
           </div>
         </div>
 
@@ -3700,6 +3792,71 @@ const CONV_DATA = {
       { dir:'in',  text:'Thank you. Is the customer eligible for a free swap under the loyalty program?', time:'09:27 AM' },
       { dir:'out', text:'Yes — as a continuous subscriber for 3+ years on a Super bouquet, David qualifies for a free HD decoder swap. No additional charge. Please ensure the new decoder is paired with his existing smartcard 02144099871 during setup.', time:'09:29 AM' },
       { dir:'in',  text:'Understood. We will proceed with the swap and pairing. We will send the service completion form once done.', time:'09:31 AM' },
+    ]
+  },
+
+  'conv-9': {
+    customer: { name: 'Brian Kamau',   phone: '254 722 334 455', email: 'brian.kamau@gmail.com' },
+    subscription:   { number: '—',   status: 'New Lead', nextDue: '—', rate: 'KES 1,149 / Monthly (Classic)' },
+    category: 'lead',
+    thread:   { start: '22/3/2026 – 10:05 AM', agent: 'Sarah K.', label: 'Lead to Subscription' },
+    messages: [
+      { dir:'in',  text:'Hi, I want to get StarTimes at home. What do I need?', time:'10:05 AM' },
+      { dir:'out', text:'Welcome, great choice! Do you already have a StarTimes decoder, or do you need a new one?', time:'10:06 AM' },
+      { dir:'in',  text:'I need a new one.', time:'10:07 AM' },
+      { dir:'out', text:'Perfect. Which area are you in? That helps me pick the right kit and your nearest shop.', time:'10:08 AM' },
+      { dir:'in',  text:'Nairobi, South B.', time:'10:09 AM' },
+      { dir:'out', text:'Got it. For South B I recommend the StarTimes antenna combo: decoder, antenna and your first month — watching the same day. Would you like to see packages or order now?', time:'10:10 AM' },
+      { dir:'in',  text:'Show packages.', time:'10:11 AM' },
+      { dir:'out', text:'Antenna bouquets per month:\n\n• Nyota — KES 329 (20+ channels)\n• Basic — KES 749 (40+ channels)\n• Classic — KES 1,149 (90+ channels incl. sport, movies & kids)\n\nPlus free viewing on the StarTimes ON app with any bouquet.', time:'10:12 AM' },
+      { dir:'in',  text:'Get me Classic with delivery.', time:'10:14 AM' },
+      { dir:'out', text:'Great choice! Tap below to pay securely. An installer will call within 24 hours to set you up. 👉 https://pay.startimes.co.ke/order/classic-combo', time:'10:15 AM' },
+      { dir:'out', text:'Welcome to StarTimes, Brian! 🎉 Order confirmed — Classic antenna combo with delivery to South B. Your installer will call today and we\'ll guide you through setup right here.', time:'10:18 AM' },
+    ]
+  },
+
+  'conv-10': {
+    customer: { name: 'Agnes Wanjiru', phone: '254 733 556 677', email: 'agnes.w@yahoo.com' },
+    subscription:   { number: '02155678432',   status: 'Active', nextDue: '25-08-2026', rate: 'KES 749 / Monthly (Basic)' },
+    category: 'renewal',
+    thread:   { start: '22/3/2026 – 11:30 AM', agent: 'Mark J.', label: 'Downgrade & Pause' },
+    messages: [
+      { dir:'in',  text:'I can\'t afford Classic this month, I will just cancel.', time:'11:30 AM' },
+      { dir:'out', text:'No problem at all — let\'s keep you watching instead. A few options:\n\n1️⃣ Basic (KES 749) — keep most channels, pay less\n2️⃣ Nyota (KES 329) — the essentials, lowest price\n3️⃣ Pause and restart anytime\n\nWhich works for you?', time:'11:31 AM' },
+      { dir:'in',  text:'Switch to Basic.', time:'11:33 AM' },
+      { dir:'out', text:'Good choice. On Basic you keep news, entertainment and selected sport. Tap to switch — active until 25 Aug. 👉 https://pay.startimes.co.ke/switch/basic', time:'11:34 AM' },
+      { dir:'out', text:'Done! You\'re on Basic until 25 Aug. Jump back to Classic anytime — just reply UPGRADE.', time:'11:36 AM' },
+    ]
+  },
+
+  'conv-11': {
+    customer: { name: 'Samuel Odhiambo', phone: '254 711 889 900', email: 'sam.odhiambo@outlook.com' },
+    subscription:   { number: '02133445566',   status: 'Active', nextDue: '30-03-2026', rate: 'KES 1,499 / Monthly (Super)' },
+    category: 'technical',
+    thread:   { start: '22/3/2026 – 2:15 PM', agent: 'AI Agent', label: 'No-Signal Triage' },
+    messages: [
+      { dir:'in',  text:'My decoder shows No Signal since this morning.', time:'02:15 PM' },
+      { dir:'out', text:'Let\'s get you back on. Quick check: is it raining heavily where you are right now?', time:'02:15 PM' },
+      { dir:'in',  text:'No, clear skies.', time:'02:16 PM' },
+      { dir:'out', text:'Then it\'s likely the antenna or cable. Please:\n\n1️⃣ Check the cable is firmly screwed into the decoder\n2️⃣ On the remote press MENU → Installation → Auto Search\n\nTell me if the signal bar fills up.', time:'02:17 PM' },
+      { dir:'in',  text:'Yes, it\'s back!', time:'02:20 PM' },
+      { dir:'out', text:'Perfect — no technician needed! 🎉 Your Super bouquet channels should all be showing now. Reply MENU for anything else.', time:'02:20 PM' },
+    ]
+  },
+
+  'conv-12': {
+    customer: { name: 'Brian Kamau',   phone: '254 722 334 455', email: 'brian.kamau@gmail.com' },
+    subscription:   { number: '02155612389',   status: 'Active', nextDue: '22-04-2026', rate: 'KES 1,149 / Monthly (Classic)' },
+    category: 'request',
+    thread:   { start: '22/3/2026 – 4:00 PM', agent: 'Priya M.', label: 'NPS + Cross-Sell' },
+    messages: [
+      { dir:'out', text:'Thanks for staying with StarTimes, Brian! Quick question: how likely are you to recommend us to a friend? Reply with a number from 0 to 10.', time:'04:00 PM' },
+      { dir:'in',  text:'9', time:'04:12 PM' },
+      { dir:'out', text:'Love it, thank you! 🙏 What\'s one thing we could do better?', time:'04:13 PM' },
+      { dir:'in',  text:'Fewer signal drops when it rains.', time:'04:15 PM' },
+      { dir:'out', text:'Noted and shared with our technical team — we appreciate the feedback. Two things you might enjoy:\n\n📱 StarTimes ON VIP — watch on your phone, great for when weather affects the dish\n☀️ StarTimes Solar — keep watching during blackouts, pay in instalments\n\nReply ON or SOLAR to learn more.', time:'04:16 PM' },
+      { dir:'in',  text:'SOLAR', time:'04:18 PM' },
+      { dir:'out', text:'Smart move, especially in blackout season! ☀️ An advisor will WhatsApp you shortly with the right kit and a payment plan for your area.', time:'04:19 PM' },
     ]
   }
 };
